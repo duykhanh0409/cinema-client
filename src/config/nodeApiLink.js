@@ -1,0 +1,1 @@
+export const nodeApiLink='https://cinema-web-backend.herokuapp.com'
