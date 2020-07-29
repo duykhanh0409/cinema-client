@@ -5,7 +5,8 @@ const initialState={
     id:"",
     time:'',
     scheduleTime:'',
-    cinema:''
+    cinema:'',
+    listTime:[]  
 }
 
 var myReducer=(state=initialState,action)=>{
@@ -17,7 +18,8 @@ var myReducer=(state=initialState,action)=>{
             return state.schedule=action.payload;
         case types.GET_ID:
             //console.log(action)
-            return state.id   
+            state.id=action.payload;
+            return state; 
         case types.PASSTIMETOBOOKING:
              console.log(action);
              state.time=action.payload
@@ -27,7 +29,11 @@ var myReducer=(state=initialState,action)=>{
             return state;
         case types.GETCINEMA:
             state.cinema=action.payload
-            return state;        
+            return state;   
+        case types.LISTCINEMA:
+            console.log(action,"co lay dc kh");
+            state.listTime=action.payload  // lay ds gio chieu dem qua page book loc
+            return state         
         default: return state;    
     }
 }

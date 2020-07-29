@@ -36,9 +36,16 @@ h1 {
 }
 
 .reserved {
-  background: rgb(73, 138, 73) !important;
+  background: rgb(138, 25, 25) !important;
   color: #fff;
   display: inline-block;
+  cursor: not-allowed !important;
+}
+.choose {
+  background: rgb(16, 155, 39) !important;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* .reserved::after {
@@ -77,4 +84,45 @@ li {
 .right .mov{
   margin-right: 70px;
 }
+.img-screen {
+  width: 90%;
+  position: relative;
+  left: 9%;
+  margin-bottom: 20px;
+}
 
+.checked{
+  height: 30px;
+    width: 30px;
+    background: darkred;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.seatReserved{
+  margin-top: 40px;
+  display: flex;
+  padding-left: 45px;
+}
+.seatReserved p{
+  padding-right: 25px;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+
+.unchecked{
+  height: 30px;
+  width: 30px;
+  background:#109b27;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.seatAvailable{
+  height: 30px;
+  width: 30px;
+  background: #4674c9;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.table tr td{
+  font-size: 14px;
+}

@@ -27,7 +27,7 @@ class Introduct_Film extends React.Component{
                     </li>
                     <li>
                         <label>Khởi Chiếu:</label>
-                        <span>{premiere_date}</span>
+                        <span id="date">{premiere_date}</span>
                     </li>
                     <li>
                         <label>Thời Lượng:</label>

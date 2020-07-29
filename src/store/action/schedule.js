@@ -14,9 +14,10 @@ export const id_movie=(id)=>{
     }
 }
 
-export const getID=()=>{
+export const getID=(id)=>{
     return{
-        type:types.GET_ID
+        type:types.GET_ID,
+        payload:id
     }
 }
 
@@ -49,6 +50,13 @@ export const getDateBook=(date)=>{
 export const getCinema=(cinema)=>{
     return{
         type:types.GETCINEMA,
+        payload:cinema
+    }
+}
+
+export const getListTime=(cinema)=>{ // lay danh sach gio chieu dem qua page book log
+    return{
+        type:types.LISTCINEMA,
         payload:cinema
     }
 }

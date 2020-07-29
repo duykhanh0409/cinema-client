@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/heading-has-content */
 import React from "react";
 import Header from "../component/header/Header";
 import Footer from "../component/Footer/Footer";
 import Paypal from "../component/Booking_Page/CheckBookRight/Paypal";
 import "../css/Product_detail_left.css";
-
+import QRCode from "qrcode.react";
 const Profile = (props) => {
   console.log(props, "xem");
   return (
@@ -23,6 +25,13 @@ const Profile = (props) => {
             <div className="col-lg-6 col-md-6 col-sm-6">
               <h5 style={{ color: "White", padding: "50px" }}>
                 Tổng Tiền: {props.location.state.tong} $$$
+                <QRCode
+                  id="qrcode"
+                  value={props.location.state.tong}
+                  size={290}
+                  level={"H"}
+                  includeMargin={true}
+                />
               </h5>
               <Paypal topay={props.location.state.tong} />
 

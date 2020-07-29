@@ -1,0 +1,1 @@
+export const GETPREMIERE_DATE='GETPREMIERE_DATE';//lay ngay se default cho o input

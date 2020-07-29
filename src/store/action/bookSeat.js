@@ -8,6 +8,6 @@ export const  setSelectedSeat=()=>({
 export const ADD_SEATRESERVED =(seat)=>{
     return {
         type:types.ADD_SEATRESERVED,
-        seat
+        payload:seat
     }
 }

@@ -14,16 +14,14 @@ const Select_Cinema = (props) => {
   const [listNameCinema, setListNameCinema] = useState([]); // chứa list name cinema
   const [nameCinema, setNameCinema] = useState(""); // lấy giá trị nhấp vào select
   const [timeWatch, setTimeWatch] = useState([]);
-  const [timeClick, setTimeClick] = useState("");
+ 
   const dispatch = useDispatch();
   // console.log(id_movie,"xem nos la gi");
   useEffect(() => {
     getDataSchedule();
   }, []);
 
-  useEffect(() => {
-    console.log(timeClick, "có chưa");
-  }, [timeClick]);
+  
 
   useEffect(() => {
     filterListTime();
@@ -82,24 +80,24 @@ const Select_Cinema = (props) => {
     return setTimeWatch(listTime);
   };
 
-  console.log(listNameCinema);
+  // console.log(listNameCinema);
   let Cinema = listNameCinema.map((item) => (
     <option value={item.name} style={{ background: "#020d18" }}>
       {item.name}
     </option>
   ));
 
-  console.log(nameCinema);
+  //console.log(nameCinema);
 
   const handleClickTime = (e) => {
     console.log(e.target.innerText);
     var a = e.target.innerText;
-    dispatch(actions.passTimeToBooking(a));
-    setTimeClick(a); //sẻ mất giá trị khi đưa vào Link to
+    dispatch(actions.passTimeToBooking(a)); //lấy time
     dispatch(actions.getDateBook(scheduleTime)); //lấy ngày đưa lên store để truyền qua booking
-    dispatch(actions.getCinema(nameCinema)); //name tương tự
+    dispatch(actions.getCinema(nameCinema)); //tên rạp
+    dispatch(actions.getListTime(timeWatch))// lay ds time de loc
+    dispatch(actions.getID(props.id));//lấy id
   };
-  // console.log(timeClick, "chứa gì");
 
   //listtime
   let listTime = timeWatch.map((item) =>
@@ -107,11 +105,10 @@ const Select_Cinema = (props) => {
       <Link
         to={{
           pathname: `/booking/${schedule[0].id}`,
-          state: "",
         }}
       >
-        <li onClick={handleClickTime} value={item} name={item}>
-          {item}
+        <li onClick={handleClickTime} value={item} name={item.time}>
+          {item.time}
         </li>
       </Link>
     ))
@@ -146,11 +143,14 @@ const Select_Cinema = (props) => {
               <Link
                 to={{
                   pathname: `/booking/${schedule[0].id}`,
-                  state: { scheduleTime: scheduleTime, nameCinema: nameCinema },
                 }}
               >
-                <li onClick={handleClickTime} value={items} name={items}>
-                  {items}
+                <li
+                  onClick={handleClickTime}
+                  value={items.time}
+                  name={items.time}
+                >
+                  {items.time}
                 </li>
               </Link>
             ))}
@@ -161,9 +161,14 @@ const Select_Cinema = (props) => {
   ));
   const warpContent = nameCinema === "All" ? listcinema : listCinemaOption;
 
+  //lây ra danh sách gế seatavailable, seatReseved theo giờ chiếu đã chọn
+  
+
   console.log(scheduleTime, "thời gian được chọn");
   console.log(listNameCinema, "danh sách rap");
   console.log(nameCinema, "rap được chọn");
+  console.log(timeWatch, "time watch");
+ 
 
   return (
     <>

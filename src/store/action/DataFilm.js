@@ -20,6 +20,8 @@ export const getDataError=(error)=>{
     }
 }
 
+
+
  export const getData=()=>{ 
      return (dispatch)=>{
          dispatch(getDataRepuest())

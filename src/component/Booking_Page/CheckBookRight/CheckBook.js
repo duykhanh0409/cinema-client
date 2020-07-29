@@ -6,9 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import "../style/checkbook.css";
 import * as actions from "../../../store/action/schedule";
-import { connect } from "react-redux";
-import {Link} from 'react-router-dom';
-import Paypal from './Paypal';
+import { Link } from "react-router-dom";
+
 //import { set } from "immer/dist/internal";
 
 const CheckBook = (props) => {
@@ -18,10 +17,13 @@ const CheckBook = (props) => {
   const bookSeat = useSelector((state) => state.bookSeat);
   const timeBook = useSelector((state) => state.schedule);
   const dataBooking = useSelector((state) => state.dataBooking);
-  const dataTicket=useSelector(state=>state.schedule) // chưa giá trị ngày đặt và rạp chiếu truyền từ store
-  const userLogin=useSelector(state=>state.loginUser);
+  const dataTicket = useSelector((state) => state.schedule); // chưa giá trị ngày đặt và rạp chiếu truyền từ store
+  const userLogin = useSelector((state) => state.loginUser);
 
-  console.log(dataTicket,"thành công");
+  useEffect(() => {
+    console.log("thay doi không");
+  }, bookSeat.seatReserved);
+  console.log(dataTicket, "thành công");
   const onHandleChangeCombo1 = (event) => {
     console.log(event.target.value);
     setCombo1(event.target.value);
@@ -30,16 +32,13 @@ const CheckBook = (props) => {
     setCombo2(event.target.value);
   };
 
-  // console.log(this.props.bookSeat.seatReserved);
-  console.log(dataBooking[0], "chu yeu ne");
-  //console.log(props.date, "ngay chieu ne de dung luc post data");
-  console.log(timeBook.time, "gio chieu");
   const { seatReserved } = bookSeat;
+  console.log(seatReserved, "truyền qua chưa");
 
   const name = dataBooking[0] && dataBooking[0].name;
-  const id=dataBooking[0]&&dataBooking[0].id;
+  const id = dataBooking[0] && dataBooking[0].id;
   const image = dataBooking[0] && dataBooking[0].image[0];
-  console.log(name);
+  console.log(id,"đúng kh");
   let tong = seatReserved.length * 75 + combo1 * 60 + combo2 * 80;
 
   const data = {
@@ -51,23 +50,25 @@ const CheckBook = (props) => {
     Seats: seatReserved.length.toString(),
   };
 
-  console.log(typeof(tong),typeof(seatReserved.length),"xem kiểu dữ liệu");
+  console.log(typeof tong, typeof seatReserved.length, "xem kiểu dữ liệu");
   const handlePost = (e) => {
     e.preventDefault();
     console.log(data);
     axios
       .post("https://cinema-web-backend.herokuapp.com/booking/postData", {
-        id:id,
+        id: id,
         name: name,
         time: timeBook.time,
-        date: dataTicket.scheduleTime,
-        tongTien: tong,// không lên
-        cinema:dataTicket.cinema,
-        seats: seatReserved.length, //không lên
-        client:userLogin.email
+        date: dataTicket.scheduleTime, //ngày
+        tongTien: tong, // không lên
+        cinema: dataTicket.cinema, //tên rạp
+        seats: seatReserved, //không lên
+        client: userLogin.email,
       })
       .then((Response) => console.log(Response.data))
       .catch((err) => console.log(err));
+
+      
   };
 
   return (
@@ -150,7 +151,7 @@ const CheckBook = (props) => {
                     <td>
                       <p>{seatReserved.length}</p>
                     </td>
-                    <td>{seatReserved.length * 75 }$</td>
+                    <td>{seatReserved.length * 75}$</td>
                   </tr>
                 </tbody>
               </table>
@@ -160,7 +161,7 @@ const CheckBook = (props) => {
           <div className="checkSeat">
             <h5>Ghế Đã Chọn</h5>
             <div className="wrap-checkSeat">
-              <ReservedList reserved={seatReserved} />
+              <ReservedList />
             </div>
           </div>
 
@@ -168,19 +169,21 @@ const CheckBook = (props) => {
             <h6>Tổng Cộng</h6>
             <label>{tong} VND</label>
           </div>
-          
-            <button
-              className="btn btn-outline-primary"
-              style={{ width: "100%" }}
-              onClick={handlePost}
+
+          <button
+            className="btn btn-outline-primary"
+            style={{ width: "100%" }}
+            onClick={handlePost}
+          >
+            <Link
+              to={{
+                pathname: "/payment",
+                state: { tong: tong },
+              }}
             >
-                <Link to={{
-                  pathname:"/payment",
-                  state:{tong:tong}
-                }}>
-                    Đặt vé
-              </Link>
-            </button>
+              Đặt vé
+            </Link>
+          </button>
         </div>
       </div>
     </form>

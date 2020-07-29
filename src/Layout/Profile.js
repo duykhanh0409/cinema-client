@@ -1,12 +1,16 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
 import Header from "../component/header/Header";
 import Footer from "../component/Footer/Footer";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/isLogOut";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import "../css/Product_detail_left.css";
-import { nodeApiLink } from '../config/nodeApiLink';
+import { nodeApiLink } from "../config/nodeApiLink";
+import "../component/Booking_Page/booking_Seat/booking_seat.css";
+import QRCode from "qrcode.react";
 
 const Profile = () => {
   const [ticket, setTicket] = useState([]);
@@ -18,7 +22,7 @@ const Profile = () => {
   }, []);
   const data = () => {
     axios
-    .get(`${nodeApiLink}/booking/data`)
+      .get(`${nodeApiLink}/booking/data`)
       .then((Response) => {
         const ticket = Response.data;
         setTicket(ticket);
@@ -36,10 +40,11 @@ const Profile = () => {
       <td>{item.date}</td>
       <td>{item.time}</td>
       <td>{item.name}</td>
-      <td>{item.seats}</td>
+      <td>{item.seats.length}</td>
       <td>{item.tongTien}</td>
     </tr>
   ));
+
   var name = userName.email.split("@");
 
   const LogOutAccount = () => {
@@ -48,14 +53,29 @@ const Profile = () => {
   };
   console.log(logOut, "đâu");
 
-  const sentEmail=()=>{
-    emailjs.send('gmail','template_ooyu9fe9',{khanh:"cảm ơn bạn đã đặt vé"}, 'user_K0eHghnp38YT5qwjxEru9')
-    .then((response) => {
-       console.log('SUCCESS!', response.status, response.text);
-    }, (err) => {
-       console.log('FAILED...', err);
-    });
-  }
+  const sentEmail = () => {
+    emailjs
+      .send(
+        "gmail",
+        "template_ooyu9fe9",
+        <QRCode
+          id="qrcode"
+          value="bạn đã đặt chổ thành công "
+          size={290}
+          level={"H"}
+          includeMargin={true}
+        />,
+        "user_K0eHghnp38YT5qwjxEru9"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
   return (
     <>
       <Header />
@@ -105,7 +125,7 @@ const Profile = () => {
               <div>
                 <div className="container" style={{ paddingTop: "80px" }}>
                   <table className="table">
-                    <thead>
+                    <thead style={{ textAlign: "center" }}>
                       <tr>
                         <th scope="col">STT </th>
                         <th scope="col">Rap</th>
@@ -120,6 +140,14 @@ const Profile = () => {
                   </table>
                 </div>
               </div>
+
+              <QRCode
+                id="qrcode"
+                value="bạn đã đặt chổ thành công "
+                size={200}
+                level={"H"}
+                includeMargin={true}
+              />
             </div>
           </div>
         </div>

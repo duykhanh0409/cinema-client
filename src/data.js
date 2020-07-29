@@ -131,3 +131,500 @@ export default[
         "date": "2020-08-23"
     }]
 }
+
+
+
+
+{
+    "_id": {
+        "$oid": "5f1c2d23b6f16de2f3f932eb"
+    },
+    "id": "mov_1",
+    "name": "logan:Người sói",
+    "schedule_time": [{
+        "ds_cinema": [{
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }]
+    }, {
+        "ds_cinema": [{
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }]
+    }, {
+        "ds_cinema": [{
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }]
+    }, {
+        "ds_cinema": [{
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VIN COM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }]
+    }]
+}
+//data moi nhat
+{
+    "_id": {
+        "$oid": "5f20dcc271eacfe892d68920"
+    },
+    "id": "mov_2",
+    "name": "BLADE RUNNER",
+    "schedule_time": [{
+        "ds_cinema": [{
+            "name": "CGV MAGE QUAN 2",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VINCON THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VINCON QUAN 9",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }],
+        "date": "2020-07-17"
+    }, {
+        "ds_cinema": [{
+            "name": "CGV KINH DUONG VUONG",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV LE THANH TONG",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VINCON QUAN 9",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }],
+        "date": "2020-07-18"
+    }, {
+        "ds_cinema": [{
+            "name": "CGV VINCOM THU DUC",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV HOANG HOA THAM",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV MAGE QUAN 2",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }],
+        "date": "2020-07-19"
+    }, {
+        "ds_cinema": [{
+            "name": "CGV KINH DUONG VUONG",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VINCOM PLAZA",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }, {
+            "name": "CGV VINCOM GO VAP",
+            "showtime": [{
+                "time": "1:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "2:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "3:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }, {
+                "time": "4:30pm",
+                "seatAvailable": [],
+                "seatReserved": []
+            }]
+        }],
+        "date": "2020-07-20"
+    }]
+}

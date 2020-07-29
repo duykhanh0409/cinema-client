@@ -6,3 +6,4 @@ export const DATABOOKING='DATABOOKING'//laasy data cho store tra ve mang tung mo
 export const GETDATABOOKING='GETDATABOOKING' // truyen cho component khac
 export const GETDATEBOOK='GETDATEBOOK';
 export const GETCINEMA='GETCINEMA';
+export const LISTCINEMA='LISTCINEMA'; // lay danh sach gio chieu dem qua page book loc

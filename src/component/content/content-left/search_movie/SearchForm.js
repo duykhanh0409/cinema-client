@@ -32,8 +32,10 @@ const SearchForm = (props) => {
       if (year) {
         movieItem = movieItem.filter((item) => item.year_of_production <= year);
       }
-      if(country){
-        movieItem=movieItem.filter((item)=>item.country.toUpperCase()===country.toUpperCase())
+      if (country) {
+        movieItem = movieItem.filter(
+          (item) => item.country.toUpperCase() === country.toUpperCase()
+        );
       }
       return props.filter(movieItem);
     }
